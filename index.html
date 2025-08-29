@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foto Art</title>
+    <link rel="icon" href="https://images.icon-icons.com/1759/PNG/512/4124810-camera-photographic-equipment-photographic-object-photography-picture_113912.png" />
 </head>
+
 <body>
-    
+    <header id="header">
+        <nav id="nav">
+            <ul id="nav-menu">
+                <li><a href="#quem-sou" class="nav-link">Quem sou</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#contato" class="nav-link">Contate-me</a></li>
+            </ul>
+        </nav>
+        <div id="texto-header">
+            <h1 class="titulo-header">Capturando Momentos Únicos</h1>
+            <p class="info-header">
+                Fotógrafo profissional especializado em retratos, eventos e fotografia
+                artística
+            </p>
+            <div><a href="#contato" class="btn-header">Contate-me</a></div>
+        </div>
+        <div id="img-header">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="fotografo" />
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="quem-sou">
+            <div class="container">
+                <h2 class="section-titulo">Quem eu sou</h2>
+                <p class="quem-intro">
+                    Olá! Sou Joaquim Ferreira, fotógrafo profissional com mais de 10 anos de experiência capturando
+                    momentos especiais e criando memórias que duram para sempre.
+                </p>
+                <p class="quem-hist">
+                    Minha paixão pela fotografia começou na adolescência, quando ganhei minha primeira câmera e comecei
+                    a registrar cenas do cotidiano. Especializo-me em retratos, fotografia de eventos e ensaios ao ar
+                    livre, e tenho orgulho de oferecer um serviço personalizado e de alta qualidade para cada cliente.
+                </p>
+
+            </div>
+            <div id="img-quem-sou">
+                <img src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?q=80&w=1458&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="fotografo" />
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio">
+            <div class="container">
+                <h2 class="section-title">Portfólio</h2>
+                <p class="portfolio-intro">Aqui voce pode ver alguns dos trabalhos que fiz</p>
+                <div class="portfolio-grid">
+                    <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Foto de casamento" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1708501465539-10f40b37296e?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Foto de retrato" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1648340483643-8d4f80fb6862?q=80&w=625&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Foto artística" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Foto ar livre" class="portfolio-img" />
+                    <img src="https://images.unsplash.com/photo-1731475760849-459c36ed6bca?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="foto evento" class="portfolio-img" />
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="container">
+                <h2 class="section-title">Serviços</h2>
+                <ul class="servicos-lista">
+                    <li class="servico-item">Fotografia de Casamento</li>
+                    <li class="servico-item">Ensaios Fotográficos</li>
+                    <li class="servico-item">Fotografia de Eventos</li>
+                    <li class="servico-item">Edição e Restauração de Imagens</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2 class="section-title">Contate-me</h2>
+                <form class="contato-form">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" id="nome" class="form-input" placeholder="Seu nome" required>
+
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+
+                    <label for="servico">Escolha um serviço:</label>
+                    <select name="servico" id="servico" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="casamento">Fotografia de Casamento</option>
+                        <option value="ensaio">Ensaio Fotográfico</option>
+                        <option value="evento">Cobertura de Evento</option>
+                        <option value="restauracao">Restauração de Imagens</option>
+                    </select>
+
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea id="mensagem" class="form-textarea" placeholder="Escreva sua mensagem..."
+                        required></textarea>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div id="logo-footer">
+                <img src="https://images.icon-icons.com/1759/PNG/64/4124810-camera-photographic-equipment-photographic-object-photography-picture_113912.png" alt="logo-icon" />
+                <p class="logo-text">Capturando Momentos Únicos</p>
+            </div>
+            
+            <div id="contato-footer">
+                <h5>Contate-me</h5>
+                <p class="contato-info">Telefone: (11) 1234-5678</p>
+                <p class="contato-info">E-mail: YmLjP@example.com</p>
+            </div>
+            <div id="redesociais">
+                <img src="https://images.icon-icons.com/2716/PNG/32/instagram_logo_icon_173070.png" alt="instagram-icon" />
+                <img src="https://images.icon-icons.com/602/PNG/32/Facebook_icon-icons.com_55914.png" alt="facebook-icon" />
+                <img src="https://images.icon-icons.com/4029/PNG/48/twitter_x_new_logo_square_x_icon_256075.png"
+                    alt="twitter-icon" />
+            </div>
+        </div>
+        <div id="footer-text">
+            <p class="footer-text">&copy; 2025 - Fotógrafo Profissional | Todos os direitos reservados</p>
+        </div>
+    </footer>
 </body>
+
 </html>
