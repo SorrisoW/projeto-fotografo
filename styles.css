@@ -1,15 +1,14 @@
 :root {
-  --cor-fundo: #2a2a2a;   
-  --cor-texto-claro: #f0f0f0;
-  --cor-destaque: #ffc107;
-  --cor-texto-secundario: #888;
-  --fonte-padrao:'Poppins', sans-serif:
+  --background: #2a2a2a;   
+  --light-text: #f0f0f0;
+  --primary: #ffc107;
+  --secondary-text-color: #888;
 }
 
 body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto-claro);
-  font-family: var(--fonte-padrao);
+  background-color: var(--background);
+  color: var(--light-text);
+  font-family: 'Poppins', sans-serif;
 
   background-image: url('teste.webp');
   background-size:contain;
@@ -18,11 +17,11 @@ body {
 }
 
 h1{
-  color: var(--cor-destaque)
+  color: var(--primary)
 }
 
 h2{
-  color: var(--cor-texto-secundario)
+  color: var(--secondary-text-color)
 }
 
 /*img{
