@@ -1,5 +1,5 @@
 :root {
-  --background: #2a2a2a;   
+  --background: #2a2a2a;
   --light-text: #f0f0f0;
   --primary: #ffc107;
   --secondary-text-color: #888;
@@ -9,24 +9,70 @@ body {
   background-color: var(--background);
   color: var(--light-text);
   font-family: 'Poppins', sans-serif;
-
-  background-image: url('teste.webp');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
+.hero-header {
+  width: 100%;
+  min-height: 40rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4');
+
+  article {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+header {
+  padding-top: 2rem;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.titulo-header{
+  font-size: 3rem;
+  font-weight: bolder;
+  padding-left: 50rem;
+}
+
+.info-header{
+  font-weight: lighter;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
   color: var(--primary)
 }
 
-h2{
+h2 {
   color: var(--secondary-text-color)
 }
-
-/*img{
-  display: none;
-} */
 
 
 /* https://dribbble.com/shots/16411711-Photography-Service-Landing-page - Site com a referencia */
