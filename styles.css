@@ -4,21 +4,26 @@
   --text-color-button: #000000ba;
   --light-text: #f0f0f0;
   --primary: #ffc107;
-  --secondary-text-color: #888;
+  --secondary-text-color: #6b6b6b;
 }
+
 
 body {
   background-color: var(--background);
   color: var(--light-text);
-  font-family: 'Poppins', sans-serif; /*fonte anexada no arquiv index*/
+  font-family: 'Poppins', sans-serif;
+  /*fonte anexada no arquivo index*/
   margin: 0;
   padding: 0;
 }
 
+
 .hero-header {
   width: 100%;
-  min-height: 50rem; /*define a altura mínima que um elemento deve ter*/
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4') center center / cover no-repeat; /*cria uma sobreposição escura e semitransparente sobre a imagem. Isso ajuda a dar mais destaque ao texto que estiver por cima da imagem, aumentando o contraste e a legibilidade.*/
+  min-height: 50rem;
+  /*define a altura mínima que um elemento deve ter*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4') center center / cover no-repeat;
+  /*cria uma sobreposição escura e semitransparente sobre a imagem. Isso ajuda a dar mais destaque ao texto que estiver por cima da imagem, aumentando o contraste e a legibilidade.*/
 
   article {
     width: 100%;
@@ -30,11 +35,18 @@ body {
   }
 }
 
+
 header {
   padding-top: 3rem;
   font-size: 20px;
   font-weight: lighter;
 }
+
+
+h1 {
+  color: var(--primary)
+}
+
 
 nav ul {
   list-style: none;
@@ -44,32 +56,43 @@ nav ul {
   margin: 0;
 }
 
+
 .nav-link {
+  /*alterações no liks de navegação, esconde a linha do link padrão e coloca cor escolhida*/
   text-decoration: none;
-  color: white;
+  color: var(--light-text);
 }
+
+
+.nav-link:hover {
+  /*acrescenta uma linha abaixo do link para uma melhor visualização*/
+  border-bottom: 1px solid var(--secondary-text-color);
+  /* Adiciona uma linha sólida ao passar o mouse */
+}
+
 
 .titulo-header {
   font-size: 3.5rem;
   font-weight: bolder;
   line-height: 4rem;
-  /* ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas. */
+  /*ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas*/
   padding-left: 35rem;
-  /**/
   margin-bottom: 0;
-
-
-  
+  text-shadow: 1px 1px 2px #000000
+    /*acrescenta uma sombra as letras*/
 }
+
 
 .info-header {
   font-size: 1.3rem;
   font-weight: bolder;
   padding-left: 34rem;
   margin-top: 0;
+  font-weight: lighter;
 }
 
-.button-contact{
+
+.button-contact {
   background-color: var(--primary);
   color: var(--light-text);
   border: none;
@@ -80,36 +103,46 @@ nav ul {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra suave */
 
-  animation-name: example; /*nome da animação que usara como variável em @kayframes*/
-  animation-duration: 4s; /* Duração de cada ciclo */
-  animation-iteration-count: infinite; /* Repetição infinita */
-  
+  animation-name: example;
+  /*nome da animação que usara como variável em @kayframes*/
+  animation-duration: 4s;
+  /* duração dos ciclos de repetição da animação */
+  animation-iteration-count: infinite;
+  /* Repetição infinita */
 }
 
-  @keyframes example {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: var(--primary);}
+
+@keyframes example {
+  25% {
+    background-color: var(--light-text);
+    /*cor aplicada com 25%, podendo colocar mais de uma com, com varias %*/
+  }
+
+  100% {
+    background-color: var(--primary);
+  }
 }
 
-/* Efeito ao passar o mouse */
+
 .button-contact:hover {
+  /* Efeito ao passar o mouse */
   background-color: #297fb96e;
-  transform: translateY(-2px); /* Eleva o botão levemente */
-
+  transform: translateY(-2px);
+  /* Eleva o botão levemente */
 }
 
 
-/* Efeito ao clicar no botão */
 .button-contact:active {
-  transform: translateY(0); /* Faz o botão voltar à posição original */
+  /* Efeito ao clicar no botão */
+  transform: translateY(0);
+  /* Faz o botão voltar à posição original */
 }
 
 
-.link-button{
+.link-button {
   color: var(--text-color-button);
   text-decoration: none;
   display: inline-block;
@@ -120,26 +153,110 @@ nav ul {
 
 
 
-
-
-
-.info-header {
-  font-weight: lighter;
+#img-quem-sou img{
+  max-width: 100%;
+  width: 200px;
+  height: 250px;
+  border-width: 0px 0px 2px 2.5px; /* Topo, direita, inferior, esquerda */
+  border-style: none none solid solid; /* Topo, direita, inferior, esquerda */
+  border-color: var(--primary); /* Topo, direita, inferior, esquerda */
 }
 
-
-main {
+.primary-title{
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-left: 35rem;  
+  line-height: 4rem;
+  /*ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas*/
+  text-shadow: 1px 1px 2px #000000;
+    /*acrescenta uma sombra as letras*/
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  color: var(--secondary-text-color);
 }
 
-h1 {
-  color: var(--primary)
+
+#quem-sou{
+    min-height: 40rem;
 }
+
 
 h2 {
-  color: var(--secondary-text-color)
+  font-size: 40px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  padding-top: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
+
+/* Contêiner do Testimonial (Layout) */
+.quem-container {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* Contêiner da Foto com Borda */
+.photo-container {
+  position: relative;
+  width: 300px;
+  height: 350px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  display: block;
+}
+
+/* Criando a borda com pseudo-elementos */
+.photo-container::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary); /* Cor da borda */
+  z-index: -1; /* Coloca a borda atrás da imagem */
+}
+
+
+/* Estilos do Balão de Fala */
+.quote-box {
+  background-color: var(--secondary-text-color); /* Cor de fundo escura */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito 3D */
+  color: #ccc;
+  width: 600px;
+}
+
+
+.quem-intro {
+  line-height: 1.6;
+  text-shadow: 0.2px 0.4px #000000;
+}
+
+
+.quem-hist{
+  line-height: 1.6;
+  text-shadow: 0.2px 0.4px #000000;
+}
+
+
+.contact {
+  color: var(--primary); /* Cor laranja do link */
+  text-decoration: none;
+}
+
+
+
+
+
 
 
 /* https://dribbble.com/shots/16411711-Photography-Service-Landing-page - Site com a referencia */
