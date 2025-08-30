@@ -1,5 +1,7 @@
 :root {
+  /*criação e variáveis aplicada em todo o site*/
   --background: #2a2a2a;
+  --text-color-button: #000000ba;
   --light-text: #f0f0f0;
   --primary: #ffc107;
   --secondary-text-color: #888;
@@ -8,18 +10,15 @@
 body {
   background-color: var(--background);
   color: var(--light-text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /*fonte anexada no arquiv index*/
   margin: 0;
   padding: 0;
 }
 
 .hero-header {
   width: 100%;
-  min-height: 40rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4');
+  min-height: 50rem; /*define a altura mínima que um elemento deve ter*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4') center center / cover no-repeat; /*cria uma sobreposição escura e semitransparente sobre a imagem. Isso ajuda a dar mais destaque ao texto que estiver por cima da imagem, aumentando o contraste e a legibilidade.*/
 
   article {
     width: 100%;
@@ -32,7 +31,7 @@ body {
 }
 
 header {
-  padding-top: 2rem;
+  padding-top: 3rem;
   font-size: 20px;
   font-weight: lighter;
 }
@@ -50,13 +49,81 @@ nav ul {
   color: white;
 }
 
-.titulo-header{
-  font-size: 3rem;
+.titulo-header {
+  font-size: 3.5rem;
   font-weight: bolder;
-  padding-left: 50rem;
+  line-height: 4rem;
+  /* ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas. */
+  padding-left: 35rem;
+  /**/
+  margin-bottom: 0;
+
+
+  
 }
 
-.info-header{
+.info-header {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding-left: 34rem;
+  margin-top: 0;
+}
+
+.button-contact{
+  background-color: var(--primary);
+  color: var(--light-text);
+  border: none;
+  border-radius: 0.3rem;
+  margin-left: 10.5rem;
+
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+  animation-name: example; /*nome da animação que usara como variável em @kayframes*/
+  animation-duration: 4s; /* Duração de cada ciclo */
+  animation-iteration-count: infinite; /* Repetição infinita */
+  
+}
+
+  @keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: var(--primary);}
+}
+
+/* Efeito ao passar o mouse */
+.button-contact:hover {
+  background-color: #297fb96e;
+  transform: translateY(-2px); /* Eleva o botão levemente */
+
+}
+
+
+/* Efeito ao clicar no botão */
+.button-contact:active {
+  transform: translateY(0); /* Faz o botão voltar à posição original */
+}
+
+
+.link-button{
+  color: var(--text-color-button);
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.info-header {
   font-weight: lighter;
 }
 
