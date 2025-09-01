@@ -18,8 +18,8 @@ body {
   color: var(--light-text);
   font-family: 'Poppins', sans-serif;
   /*fonte anexada ao arquivo index*/
-  margin: 5px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -45,7 +45,7 @@ body {
 
 header {
   padding-top: 3rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: lighter;
 }
 
@@ -213,8 +213,8 @@ h2 {
 .photo-container::after {
   content: '';
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
   width: 100%;
   height: 100%;
   border: 2px solid var(--primary);
@@ -286,7 +286,7 @@ h2 {
   /*
     Adiciona um espaçamento (gap) entre as imagens na galeria.
   */
-  gap: 20px;
+  gap: 1.25rem;
   overflow: hidden;
 }
 
@@ -333,62 +333,62 @@ h2 {
 }
 
 .servicos-lista li {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
   /* Espaçamento entre os itens */
   position: relative;
-  padding-left: 30px;
   /* Espaço para o novo marcador */
-  text-align: left;
-  display: inline-block;
   /* Faz a lista se comportar como blocos */
   width: 48%;
   /* Exemplo para dividir a lista em duas colunas */
-  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-/* Cria um marcador de bolinha personalizado */
-.servicos-lista li::before {
-  content: '•';
-  position: relative;
-  padding-left: 1px;
-  font-size: 1.5rem;
-  color: #f29c2d;
-  /* Cor de destaque para o marcador */
-}
 
 /* Adiciona uma linha sutil para separar os itens */
 .servicos-lista li:not(:last-child) {
   border-bottom: 1px solid black;
-  padding-bottom: 10px;
+  padding-bottom: 0.6rem;
 }
 
 
 /*CONTATE-ME*/
 
-
 /*agrupamento de campos*/
 fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+  border: none;
+}
+
+#contato-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /*estilos do Formulário como um todo*/
 .contato-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Espaço entre cada fieldset */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Espaço entre cada fieldset */
+
+  width: 100%;
+  max-width: 20rem;
 }
 
 
 /* Estilo para as labels */
 .form-label {
-    display: block; /* Ocupa a largura total para ficar acima do input */
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #bbb;
-    transition: color 0.3s ease;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+  color: #bbb;
 }
 
 /* --- Estilos para os Inputs e Textarea --- */
@@ -396,16 +396,18 @@ fieldset {
 .form-input,
 .form-textarea,
 .contato-form select {
-    width: 40%;
-    padding: 12px;
-    background-color: var(--background);
-    border: 1px solid var(--secondary-text-color);
-    border-radius: 5px;
-    color: var(--light-text);
-    font-size: 1em;
-    transition: all 0.3s ease; /* Transição para todos os efeitos */
-    box-sizing: border-box; /* Garante que padding não adicione largura extra */
-    display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--background);
+  border: 1px solid var(--secondary-text-color);
+  border-radius: 5px;
+  color: var(--light-text);
+  font-size: 1em;
+  transition: all 0.3s ease;
+  /* Transição para todos os efeitos */
+  box-sizing: border-box;
+  /* Garante que padding não adicione largura extra */
+  display: block;
 }
 
 
@@ -416,35 +418,43 @@ fieldset {
 .form-input:focus,
 .form-textarea:focus,
 .contato-form select:focus {
-    border-color: var(--primary); /* Cor de destaque */
-    box-shadow: 0 0 8px rgba(109, 122, 11, 0.293);
-    outline: none; /* Remove a borda padrão do navegador */
+  border-color: var(--primary);
+  /* Cor de destaque */
+  box-shadow: 0 0 8px rgba(109, 122, 11, 0.293);
+  outline: none;
+  /* Remove a borda padrão do navegador */
 }
 
 /* Cor do placeholder */
 ::placeholder {
-    color: var(--light-text);
-
+  color: var(--light-text);
 }
 
 /* Estilo para o botão de envio */
-.contato-form .contato-form-container {
-    padding: 10px;
-    background-color: var(--primary);
-    color: var(--light-text);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block; /* Garante que ele fique em uma linha própria */
-    width: 200px; /* Largura fixa, você pode ajustar este valor */
-    margin: 20px auto 0 auto;
+.button-contato-form {
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--light-text);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  width: 100%;
+  /* Garante que ele fique em uma linha própria */
+  /* Largura fixa, você pode ajustar este valor */
 }
 
-.contato-form .contato-form-container:hover {
-    transform: translateY(-2px); /* Efeito de "levitação" */
+.button-contato-form:hover {
+  transform: translateY(-2px);
+  /* Efeito de "levitação" */
+}
+
+textarea {
+  resize: none;
+  min-height: 5rem;
 }
 
 
@@ -461,43 +471,45 @@ fieldset {
 
 /* --- Estilos do Footer --- */
 .footer-container {
-    background-color: var(--background);
-    color: var(--light-text);
-    display: grid;  
-    align-items: center;
+  background-color: var(--background);
+  color: var(--light-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 
 /* Título do footer */
 .logo-text {
-    color: var(--light-text);
-    font-size: 1em;
-    margin-bottom: 10px;
-    align-items: center;
-    gap: 5px;
+  color: var(--light-text);
+  font-size: 1em;
+  margin-bottom: 10px;
+  gap: 5px;
 }
 
 /* Informações de contato */
 .contato-footer {
-    margin: 5px 0;
-    font-size: 0.9em;
+  margin: 5px 0;
+  font-size: 0.9em;
 }
 
 /* Ícones das redes sociais */
 #redesociais img {
-    gap: 40px;
+  gap: 40px;
 }
 
 
 
 /* Copyright */
 .copyright-text {
-    display: grid;
-    text-align: center;
-    padding-top: 15px;
-    border-top: 1px solid black;
-    font-size: 0.8em;
-    color: var(--primary);
+  display: grid;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid black;
+  font-size: 0.8em;
+  color: var(--primary);
 }
 
 
