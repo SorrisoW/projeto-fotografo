@@ -23,6 +23,7 @@
         <header id="header">
             <nav id="nav">
                 <ul id="nav-menu">
+                    <img src="./assets/logocamera.svg" class="camera-logo" alt="camera logo" />
                     <li><a href="#quem-sou" class="nav-link">Quem sou</a></li>
                     <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
                     <li><a href="#servicos" class="nav-link">Serviços</a></li>
@@ -84,7 +85,8 @@
                         alt="Foto ar livre" class="gallery-img-4" />
                     <img src="https://images.unsplash.com/photo-1731475760849-459c36ed6bca?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Fotografia Evento" class="gallery-img-5" />
-                    <img src="https://s1.best-wallpaper.net/wallpaper/m/1901/Man-fishing-lake-sunrise-morning_m.webp" alt="Pesca Esportiva" class="gallery-img-6" />    
+                    <img src="https://s1.best-wallpaper.net/wallpaper/m/1901/Man-fishing-lake-sunrise-morning_m.webp"
+                        alt="Pesca Esportiva" class="gallery-img-6" />
                 </div>
             </div>
         </section>
@@ -141,28 +143,40 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
-            <div id="logo-footer">
-                <img src="https://images.icon-icons.com/1759/PNG/64/4124810-camera-photographic-equipment-photographic-object-photography-picture_113912.png"
-                    alt="logo-icon" />
-                <p class="logo-text">Capturando Momentos Únicos</p>
-            </div>
-
-            <div id="contato-footer">
-                <h5>Contate-me</h5>
-                <p class="contato-info">Telefone: (11) 1234-5678</p>
-                <p class="contato-info">E-mail: YmLjP@example.com</p>
-            </div>
-
-            <div id="redesociais">
-                <img src="./assets/instagramLogo.svg" alt="instagram-icon" />
-                <img src="./assets/facebookLogo.svg" alt="facebook-icon" />
-                <img src="./assets/twitterLogo.svg" alt="twitter-icon" />
+            <div class="footer-top">
+                <section class="col">
+                    <div class="about">
+                        <div class="about-logo"><img src="./assets/logocamera.svg" class="camera-logo"
+                                alt="logo-icon" /></div>
+                        <div>
+                            <h5 id="footer-title">Fotógrafo Profissional</h5>
+                            <p class="logo-text">Capturando Momentos Únicos</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-contact">
+                    <div id="contato-footer">
+                        <h5>Contate-me</h5>
+                        <p class="contato-info">Telefone: (11) 1234-5678</p>
+                        <p class="contato-info">E-mail: YmLjP@example.com</p>
+                    </div>
+                </section>
+                <section class="col-follow">
+                    <h5>Siga-me</h5>
+                    <div class="redesociais">
+                        <img src="./assets/instagramLogo.svg" alt="instagram-icon" />
+                        <img src="./assets/facebookLogo.svg" alt="facebook-icon" />
+                        <img src="./assets/twitterLogo.svg" alt="twitter-icon" />
+                    </div>
+                </section>
             </div>
         </div>
 
-        <div id="footer-text">
+        <hr class="footer-divider">
+
+        <div class="subfooter">
             <p class="footer-text">&copy; 2025 - Fotógrafo Profissional | Todos os direitos reservados</p>
         </div>
     </footer>
