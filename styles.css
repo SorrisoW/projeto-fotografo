@@ -227,11 +227,11 @@ h2 {
 
 /* Estilos do Balão de Fala */
 .quote-box {
-  background-color: var(--secondary-text-color); /* Cor de fundo escura */
+  background-color: var(--background); /* Cor de fundo escura */
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito 3D */
-  color: #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 1, 1); /* Sombra para o efeito 3D */
+  color: var(--light-text);
   width: 600px;
 }
 
@@ -254,7 +254,108 @@ h2 {
 }
 
 
+/*GALERIA*/
 
+
+.section-title{
+  padding: 2rem;
+}
+
+
+.gallery-grid {
+  /*
+    Define o contêiner como um grid.
+    Isso é o que ativa o layout CSS Grid.
+  */
+  display: grid;
+
+  /*
+    Cria colunas automáticas e responsivas.
+    A função repeat() define o número de colunas,
+    e a função minmax() garante que as colunas
+    terão um tamanho mínimo de 250px e máximo de 1 fração (1fr) do espaço disponível.
+    Isso faz com que as imagens se ajustem automaticamente à largura da tela.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+
+  /*
+    Adiciona um espaçamento (gap) entre as imagens na galeria.
+  */
+  gap: 30px;
+}
+
+/*
+  Estiliza as imagens dentro do grid.
+*/
+.gallery-grid img {
+  /*
+    Faz com que a imagem ocupe 100% da largura do seu contêiner.
+  */
+  width: 100%;
+
+  /*
+    Garante que a imagem não fique distorcida e cubra o espaço alocado.
+    Pode usar 'contain' se quiser que a imagem seja totalmente visível,
+    mantendo sua proporção original.
+  */
+  object-fit: cover;
+
+  /*
+    Define a altura das imagens.
+    É importante para que todas tenham a mesma altura,
+    mantendo a consistência visual da galeria.
+  */
+  height: 400px; /* Você pode ajustar essa altura conforme sua preferência */
+
+  /*
+    Adiciona transição suave para efeitos de hover.
+  */
+  transition: transform 0.5s ease;
+  border-radius: 1rem;
+}
+
+/*
+  Adiciona um efeito de zoom quando o mouse passa por cima da imagem.
+*/
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/*SERVIÇOS*/
+
+/* Mantém a lista com marcadores, mas ajeita o espaçamento */
+.servicos-lista {
+    list-style: none; /* Remove os marcadores de bolinha padrão */
+    margin-top: 40px;
+}
+
+.servicos-lista li {
+    font-size: 1.2rem;
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    position: relative;
+    padding-left: 30px; /* Espaço para o novo marcador */
+    text-align: left;
+    display: inline-block; /* Faz a lista se comportar como blocos */
+    width: 48%; /* Exemplo para dividir a lista em duas colunas */
+    margin-right: 2%;
+}
+
+/* Cria um marcador de bolinha personalizado */
+.servicos-lista li::before {
+    content: '•'; /* Você pode usar um emoji, como '📸' */
+    position:relative;
+    padding-left: 1px;
+    font-size: 1.5rem;
+    color: #f29c2d; /* Cor de destaque para o marcador */
+}
+
+/* Adiciona uma linha sutil para separar os itens */
+.servicos-lista li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
 
 
 
