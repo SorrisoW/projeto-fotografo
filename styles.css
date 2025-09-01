@@ -18,10 +18,12 @@ body {
   color: var(--light-text);
   font-family: 'Poppins', sans-serif;
   /*fonte anexada ao arquivo index*/
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px;
 }
 
+
+/*INICIAL*/
 
 .hero-header {
   width: 100%;
@@ -133,15 +135,12 @@ nav ul {
 
 
 .button-contact:hover {
-  /* Efeito ao passar o mouse */
-  background-color: #297fb96e;
   transform: translateY(-2px);
   /* Eleva o botão levemente */
 }
 
 
 .button-contact:active {
-  /* Efeito ao clicar no botão */
   transform: translateY(0);
   /* Faz o botão voltar à posição original */
 }
@@ -158,46 +157,35 @@ nav ul {
 
 
 
-#img-quem-sou img {
-  max-width: 100%;
-  width: 200px;
-  height: 250px;
-  border-width: 0px 0px 2px 2.5px;
-  /* Topo, direita, inferior, esquerda */
-  border-style: none none solid solid;
-  /* Topo, direita, inferior, esquerda */
-  border-color: var(--primary);
-  /* Topo, direita, inferior, esquerda */
-}
 
-.primary-title {
-  font-size: 2rem;
-  font-weight: bolder;
-  padding-left: 35rem;
-  line-height: 4rem;
-  /*ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas*/
-  text-shadow: 1px 1px 2px #000000;
-  /*acrescenta uma sombra as letras*/
-  display: flex;
-  justify-content: space-around;
-  text-align: left;
-  color: var(--secondary-text-color);
-}
 
+/*QUEM SOU*/
 
 #quem-sou {
-  min-height: 40rem;
+  min-height: 50rem;
 }
 
 
 h2 {
   font-size: 40px;
-  color: var(--secondary-text-color);
+  color: var(--primary);
   text-align: center;
   padding-top: 3rem;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
+
+
+.photo-container img {
+  max-width: 100%;
+  width: 2000px;
+  height: 250px;
+  border-width: 0px 0px 2px 2.5px;
+  /* Topo, direita, inferior, esquerda */
+  border-color: var(--primary);
+  /* Topo, direita, inferior, esquerda */
+  border-radius: 5px;
+}
+
+
 
 /* Contêiner do Testimonial (Layout) */
 .quem-container {
@@ -233,6 +221,7 @@ h2 {
   /* Cor da borda */
   z-index: -1;
   /* Coloca a borda atrás da imagem */
+  border-radius: 5px;
 }
 
 
@@ -241,7 +230,9 @@ h2 {
   background-color: var(--background);
   /* Cor de fundo escura */
   padding: 30px;
-  border-radius: 8px;
+  margin-left: -9px;
+  margin-top: 2rem;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 1, 1);
   /* Sombra para o efeito 3D */
   color: var(--light-text);
@@ -272,7 +263,7 @@ h2 {
 
 
 .section-title {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
@@ -295,7 +286,8 @@ h2 {
   /*
     Adiciona um espaçamento (gap) entre as imagens na galeria.
   */
-  gap: 30px;
+  gap: 20px;
+  overflow: hidden;
 }
 
 /*
@@ -306,7 +298,8 @@ h2 {
     Faz com que a imagem ocupe 100% da largura do seu contêiner.
   */
   width: 100%;
-
+  height: 400px;
+  /* Você pode ajustar essa altura conforme sua preferência */
   /*
     Garante que a imagem não fique distorcida e cubra o espaço alocado.
     Pode usar 'contain' se quiser que a imagem seja totalmente visível,
@@ -315,25 +308,17 @@ h2 {
   object-fit: cover;
 
   /*
-    Define a altura das imagens.
-    É importante para que todas tenham a mesma altura,
-    mantendo a consistência visual da galeria.
-  */
-  height: 400px;
-  /* Você pode ajustar essa altura conforme sua preferência */
-
-  /*
     Adiciona transição suave para efeitos de hover.
   */
   transition: transform 0.5s ease;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 
 /*
   Adiciona um efeito de zoom quando o mouse passa por cima da imagem.
 */
 .gallery-grid img:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 
