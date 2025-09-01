@@ -262,10 +262,6 @@ h2 {
   text-decoration: none;
 }
 
-.camera-logo {
-  width: 40px;
-  height: 40px;
-}
 
 /*GALERIA*/
 
@@ -294,7 +290,7 @@ h2 {
   /*
     Adiciona um espaçamento (gap) entre as imagens na galeria.
   */
-  gap: 20px;
+  gap: 30px;
 }
 
 /*
@@ -364,7 +360,6 @@ h2 {
 /* Cria um marcador de bolinha personalizado */
 .servicos-lista li::before {
   content: '•';
-  /* Você pode usar um emoji, como '📸' */
   position: relative;
   padding-left: 1px;
   font-size: 1.5rem;
@@ -374,17 +369,147 @@ h2 {
 
 /* Adiciona uma linha sutil para separar os itens */
 .servicos-lista li:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 
-.footer-divider {
-  border: none;
-  height: 1px;
-  background: #5a5a5a;
-  margin: 30px 0;
+
+/*CONTATE-ME*/
+
+
+/*agrupamento de campos*/
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
+/*estilos do Formulário como um todo*/
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre cada fieldset */
+}
+
+
+/* Estilo para as labels */
+.form-label {
+    display: block; /* Ocupa a largura total para ficar acima do input */
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+/* --- Estilos para os Inputs e Textarea --- */
+
+.form-input,
+.form-textarea,
+.contato-form select {
+    width: 40%;
+    padding: 12px;
+    background-color: var(--background);
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 5px;
+    color: var(--light-text);
+    font-size: 1em;
+    transition: all 0.3s ease; /* Transição para todos os efeitos */
+    box-sizing: border-box; /* Garante que padding não adicione largura extra */
+    display: block;
+}
+
+
+
+
+
+/* Efeito de foco: muda a cor da borda e adiciona uma sombra */
+.form-input:focus,
+.form-textarea:focus,
+.contato-form select:focus {
+    border-color: var(--primary); /* Cor de destaque */
+    box-shadow: 0 0 8px rgba(109, 122, 11, 0.293);
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* Cor do placeholder */
+::placeholder {
+    color: var(--light-text);
+
+}
+
+/* Estilo para o botão de envio */
+.contato-form .contato-form-container {
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--light-text);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Garante que ele fique em uma linha própria */
+    width: 200px; /* Largura fixa, você pode ajustar este valor */
+    margin: 20px auto 0 auto;
+}
+
+.contato-form .contato-form-container:hover {
+    transform: translateY(-2px); /* Efeito de "levitação" */
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+
+
+
+/* --- Estilos do Footer --- */
+.footer-container {
+    background-color: var(--background);
+    color: var(--light-text);
+    display: grid;  
+    align-items: center;
+}
+
+
+/* Título do footer */
+.logo-text {
+    color: var(--light-text);
+    font-size: 1em;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Informações de contato */
+.contato-footer {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Ícones das redes sociais */
+#redesociais img {
+    width: 25px;
+    gap: 30px;
+}
+
+
+
+/* Copyright */
+.copyright-text {
+    display: grid;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid black;
+    font-size: 0.8em;
+    color: var(--primary);
+}
 
 
 
