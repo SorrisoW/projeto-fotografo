@@ -1,5 +1,5 @@
 :root {
-  /*criação e variáveis aplicada em todo o site*/
+  /*criação de variáveis aplicada em todo o site*/
   --background: #2a2a2a;
   --text-color-button: #000000ba;
   --light-text: #f0f0f0;
@@ -8,11 +8,16 @@
 }
 
 
+html {
+  /*acrescenta uma rolagem mais suave*/
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   color: var(--light-text);
   font-family: 'Poppins', sans-serif;
-  /*fonte anexada no arquivo index*/
+  /*fonte anexada ao arquivo index*/
   margin: 0;
   padding: 0;
 }
