@@ -1,5 +1,4 @@
-:root {
-  /*criação de variáveis aplicada em todo o site*/
+  :root {
   --background: #2a2a2a;
   --text-color-button: #000000ba;
   --light-text: #f0f0f0;
@@ -7,9 +6,7 @@
   --secondary-text-color: #6b6b6b;
 }
 
-
-html {
-  /*acrescenta uma rolagem mais suave*/
+html {  
   scroll-behavior: smooth;
 }
 
@@ -17,20 +14,16 @@ body {
   background-color: var(--background);
   color: var(--light-text);
   font-family: 'Poppins', sans-serif;
-  /*fonte anexada ao arquivo index*/
   margin: 0;
   padding: 0;
 }
-
 
 /*INICIAL*/
 
 .hero-header {
   width: 100%;
   min-height: 50rem;
-  /*define a altura mínima que um elemento deve ter*/
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4') center center / cover no-repeat;
-  /*cria uma sobreposição escura e semitransparente sobre a imagem. Isso ajuda a dar mais destaque ao texto que estiver por cima da imagem, aumentando o contraste e a legibilidade.*/
 
   article {
     width: 100%;
@@ -42,18 +35,15 @@ body {
   }
 }
 
-
 header {
   padding-top: 3rem;
   font-size: 1.25rem;
   font-weight: lighter;
 }
 
-
 h1 {
   color: var(--primary)
 }
-
 
 nav ul {
   list-style: none;
@@ -63,32 +53,23 @@ nav ul {
   margin: 0;
 }
 
-
 .nav-link {
-  /*alterações no liks de navegação, esconde a linha do link padrão e coloca cor escolhida*/
   text-decoration: none;
   color: var(--light-text);
 }
 
-
 .nav-link:hover {
-  /*acrescenta uma linha abaixo do link para uma melhor visualização*/
   border-bottom: 1px solid var(--secondary-text-color);
-  /* Adiciona uma linha sólida ao passar o mouse */
 }
-
 
 .titulo-header {
   font-size: 3.5rem;
   font-weight: bolder;
   line-height: 4rem;
-  /*ajusta a altura de cada linha, aumentando ou diminuindo o espaço entre elas*/
   padding-left: 35rem;
   margin-bottom: 0;
   text-shadow: 1px 1px 2px #000000
-    /*acrescenta uma sombra as letras*/
 }
-
 
 .info-header {
   font-size: 1.3rem;
@@ -98,53 +79,38 @@ nav ul {
   font-weight: lighter;
 }
 
-
 .button-contact {
   background-color: var(--primary);
   color: var(--light-text);
   border: none;
   border-radius: 0.3rem;
   margin-left: 10.5rem;
-
   padding: 6px 12px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  /* Sombra suave */
-
   animation-name: example;
-  /*nome da animação que usara como variável em @kayframes*/
   animation-duration: 4s;
-  /* duração dos ciclos de repetição da animação */
   animation-iteration-count: infinite;
-  /* Repetição infinita */
 }
-
 
 @keyframes example {
   25% {
     background-color: var(--light-text);
-    /*cor aplicada com 25%, podendo colocar mais de uma com, com varias %*/
   }
-
   100% {
     background-color: var(--primary);
   }
 }
 
-
 .button-contact:hover {
   transform: translateY(-2px);
-  /* Eleva o botão levemente */
 }
-
 
 .button-contact:active {
   transform: translateY(0);
-  /* Faz o botão voltar à posição original */
 }
-
 
 .link-button {
   color: var(--text-color-button);
@@ -154,10 +120,6 @@ nav ul {
   height: 100%;
   cursor: pointer;
 }
-
-
-
-
 
 /*QUEM SOU*/
 
@@ -170,7 +132,6 @@ h2 {
   font-size: 40px;
   color: var(--primary);
   text-align: center;
-  padding-top: 3rem;
 }
 
 
@@ -179,22 +140,16 @@ h2 {
   width: 2000px;
   height: 250px;
   border-width: 0px 0px 2px 2.5px;
-  /* Topo, direita, inferior, esquerda */
   border-color: var(--primary);
-  /* Topo, direita, inferior, esquerda */
   border-radius: 5px;
 }
 
-
-
-/* Contêiner do Testimonial (Layout) */
 .quem-container {
   display: flex;
   align-items: center;
   margin-top: 100px;
 }
 
-/* Contêiner da Foto com Borda */
 .photo-container {
   position: relative;
   width: 300px;
@@ -205,11 +160,9 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Garante que a imagem preencha o espaço sem distorcer */
   display: block;
 }
 
-/* Criando a borda com pseudo-elementos */
 .photo-container::after {
   content: '';
   position: absolute;
@@ -218,23 +171,18 @@ h2 {
   width: 100%;
   height: 100%;
   border: 2px solid var(--primary);
-  /* Cor da borda */
   z-index: -1;
-  /* Coloca a borda atrás da imagem */
   border-radius: 5px;
 }
 
 
-/* Estilos do Balão de Fala */
 .quote-box {
   background-color: var(--background);
-  /* Cor de fundo escura */
   padding: 30px;
   margin-left: -9px;
   margin-top: 2rem;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 1, 1);
-  /* Sombra para o efeito 3D */
   color: var(--light-text);
   width: 600px;
 }
@@ -254,65 +202,28 @@ h2 {
 
 .contact {
   color: var(--primary);
-  /* Cor laranja do link */
   text-decoration: none;
 }
 
-
 /*GALERIA*/
-
 
 .section-title {
   padding: 1rem;
 }
 
-
 .gallery-grid {
-  /*
-    Define o contêiner como um grid.
-    Isso é o que ativa o layout CSS Grid.
-  */
   display: grid;
-
-  /*
-    Cria colunas automáticas e responsivas.
-    A função repeat() define o número de colunas,
-    e a função minmax() garante que as colunas
-    terão um tamanho mínimo de 250px e máximo de 1 fração (1fr) do espaço disponível.
-    Isso faz com que as imagens se ajustem automaticamente à largura da tela.
-  */
   grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-
-  /*
-    Adiciona um espaçamento (gap) entre as imagens na galeria.
-  */
   gap: 1.25rem;
   overflow: hidden;
 }
 
-/*
-  Estiliza as imagens dentro do grid.
-*/
 .gallery-grid img {
-  /*
-    Faz com que a imagem ocupe 100% da largura do seu contêiner.
-  */
   width: 100%;
   height: 400px;
-  /* Você pode ajustar essa altura conforme sua preferência */
-  /*
-    Garante que a imagem não fique distorcida e cubra o espaço alocado.
-    Pode usar 'contain' se quiser que a imagem seja totalmente visível,
-    mantendo sua proporção original.
-  */
   object-fit: cover;
-
-  /*
-    Adiciona transição suave para efeitos de hover.
-  */
   transition: transform 0.5s ease;
   border-radius: 10px;
-
   @media only screen and (max-width: 600px) {
   .gallery-img-1 {grid-area: 1 / span 6;}
   .gallery-img-2 {grid-area: 2 / span 6;}
@@ -323,33 +234,22 @@ h2 {
 }
 }
 
-/*
-  Adiciona um efeito de zoom quando o mouse passa por cima da imagem.
-*/
 .gallery-grid img:hover {
   transform: scale(0.95);
 }
 
-
-
 /*SERVIÇOS*/
 
-/* Mantém a lista com marcadores, mas ajeita o espaçamento */
-.servicos-lista {
-  list-style: none;
-  /* Remove os marcadores de bolinha padrão */
-  margin-top: 40px;
+#servicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50rem;
 }
 
-.servicos-lista li {
-  font-size: 1.1rem;
-  margin-bottom: 0.9rem;
-  /* Espaçamento entre os itens */
-  position: relative;
-  /* Espaço para o novo marcador */
-  /* Faz a lista se comportar como blocos */
-  width: 48%;
-  /* Exemplo para dividir a lista em duas colunas */
+#servicos h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,17 +257,17 @@ h2 {
   width: 100%;
 }
 
-
-/* Adiciona uma linha sutil para separar os itens */
-.servicos-lista li:not(:last-child) {
-  border-bottom: 1px solid black;
-  padding-bottom: 0.6rem;
+.servicos-lista li {
+  font-size: 1.1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-bottom: 0.06px solid black; 
+  list-style: none;
 }
 
 
 /*CONTATE-ME*/
 
-/*agrupamento de campos*/
 fieldset {
   border: none;
 }
@@ -380,85 +280,64 @@ fieldset {
   width: 100%;
 }
 
-/*estilos do Formulário como um todo*/
 .contato-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  /* Espaço entre cada fieldset */
-
+  gap: 0.6rem;
   width: 100%;
-  max-width: 20rem;
+  max-width: 25rem;
 }
 
-
-/* Estilo para as labels */
 .form-label {
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
   font-weight: bold;
   text-align: left;
-  color: #bbb;
+  color: var(--light-text);
 }
-
-/* --- Estilos para os Inputs e Textarea --- */
 
 .form-input,
 .form-textarea,
 .contato-form select {
   width: 100%;
-  padding: 10px;
+  padding: 0.6rem;
   background-color: var(--background);
-  border: 1px solid var(--secondary-text-color);
-  border-radius: 5px;
+  border: 0.06rem solid var(--secondary-text-color);
+  border-radius: 0.3rem;
   color: var(--light-text);
-  font-size: 1em;
+  font-size: 0.8rem;
   transition: all 0.3s ease;
-  /* Transição para todos os efeitos */
   box-sizing: border-box;
-  /* Garante que padding não adicione largura extra */
   display: block;
 }
 
-
-
-
-
-/* Efeito de foco: muda a cor da borda e adiciona uma sombra */
 .form-input:focus,
 .form-textarea:focus,
 .contato-form select:focus {
   border-color: var(--primary);
-  /* Cor de destaque */
-  box-shadow: 0 0 8px rgba(109, 122, 11, 0.293);
+  box-shadow: 0 0 0.5rem rgba(109, 122, 11, 0.293);
   outline: none;
-  /* Remove a borda padrão do navegador */
 }
 
-/* Cor do placeholder */
 ::placeholder {
   color: var(--light-text);
 }
 
-/* Estilo para o botão de envio */
 .button-contato-form {
-  padding: 10px;
+  padding: 0.6rem;
   background-color: var(--primary);
   color: var(--light-text);
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   display: inline-block;
   width: 100%;
-  /* Garante que ele fique em uma linha própria */
-  /* Largura fixa, você pode ajustar este valor */
 }
 
 .button-contato-form:hover {
-  transform: translateY(-2px);
-  /* Efeito de "levitação" */
+  transform: translateY(-0.1rem);
 }
 
 textarea {
@@ -466,19 +345,8 @@ textarea {
   min-height: 5rem;
 }
 
-
-
-
-
-
-
-
 /*FOOTER*/
 
-
-
-
-/* --- Estilos do Footer --- */
 .footer-container {
   background-color: var(--background);
   color: var(--light-text);
@@ -489,8 +357,6 @@ textarea {
   width: 100%;
 }
 
-
-/* Título do footer */
 .logo-text {
   color: var(--light-text);
   font-size: 1em;
@@ -498,13 +364,11 @@ textarea {
   gap: 5px;
 }
 
-/* Informações de contato */
 .contato-footer {
   margin: 5px 0;
   font-size: 0.9em;
 }
 
-/* Ícones das redes sociais */
 #redesociais img {
   gap: 40px;
 }
@@ -514,8 +378,6 @@ textarea {
 }
 
 
-
-/* Copyright */
 .copyright-text {
   display: grid;
   text-align: center;
@@ -524,7 +386,3 @@ textarea {
   font-size: 0.8em;
   color: var(--primary);
 }
-
-
-
-/* https://dribbble.com/shots/16411711-Photography-Service-Landing-page - Site com a referencia */
