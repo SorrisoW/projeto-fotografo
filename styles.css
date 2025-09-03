@@ -125,6 +125,9 @@ nav ul {
 
 #quem-sou {
   min-height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -173,6 +176,8 @@ h2 {
   border: 2px solid var(--primary);
   z-index: -1;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -185,6 +190,17 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 1, 1);
   color: var(--light-text);
   width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .quoto-box{
+    flex-direction: row; /* Volta a alinhar a imagem e o texto lado a lado */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    text-align: left; /* Restaura o alinhamento do texto para a esquerda */
+  }
 }
 
 
@@ -354,35 +370,53 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
+  margin-top: 15rem;
 }
+
+
+#img-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.imgx{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 3rem;
+
+ 
+}
+
 
 .logo-text {
-  color: var(--light-text);
-  font-size: 1em;
-  margin-bottom: 10px;
-  gap: 5px;
+  font-size: 1rem;
 }
 
-.contato-footer {
-  margin: 5px 0;
-  font-size: 0.9em;
+h5{
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-bottom: 0%;
 }
 
-#redesociais img {
-  gap: 40px;
-}
 
-.link-rede{
-  text-decoration: none;
+#redesociais{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 
 .copyright-text {
-  display: grid;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  padding-top: 15px;
-  border-top: 1px solid black;
-  font-size: 0.8em;
+  padding-top: 0.93rem;
+  border-top: 0.07rem solid black;
+  font-size: 0.8rem;
   color: var(--primary);
 }
