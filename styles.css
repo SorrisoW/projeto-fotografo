@@ -5,7 +5,6 @@
   --primary: #ffc107;
   --secondary-text-color: #6b6b6b;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -31,9 +30,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    max-width: 45rem;
+
+    @media (max-width: 600px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
 
+    }
   }
   
 }
@@ -42,6 +51,12 @@ header {
   padding-top: 3rem;
   font-size: 1.25rem;
   font-weight: lighter;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 h1 {
@@ -55,10 +70,17 @@ nav ul {
   padding: 0;
   margin: 0;
 
-  @media (max-width: 600px){
-    flex-direction: column;
-    align-items: center;
-  }
+      @media (max-width: 600px) {
+        font-size: 0.9rem;
+        text-align: center;
+        gap: 0.6rem;
+      
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 }
 
 .nav-link {
@@ -74,17 +96,19 @@ nav ul {
   font-size: 3.5rem;
   font-weight: bolder;
   line-height: 4rem;
-  padding-left: 35rem;
   margin-bottom: 0;
-  text-shadow: 0.06rem 0.06rem 0.1rem #000000
+  text-shadow: 0.06rem 0.06rem 0.1rem #000000;
+
+  @media (max-width: 600px) {
+    font-size:2rem;
+  }
 }
 
 .info-header {
   font-size: 1.3rem;
   font-weight: bolder;
-  padding-left: 34rem;
   margin-top: 0;
-  font-weight: lighter;
+  font-weight: lighter;  
 }
 
 .button-contact {
@@ -92,8 +116,9 @@ nav ul {
   color: var(--light-text);
   border: none;
   border-radius: 0.3rem;
-  margin-left: 10.5rem;
-  padding: 0.3rem 0.7rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: fit-content;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -101,7 +126,22 @@ nav ul {
   animation-name: example;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+
+
+      @media (max-width: 600px) {
+        padding: 0.3rem;
+        font-size: 0.7rem;
+        text-align: center;
+        gap: 0.6rem;
+      
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 }
+
 @keyframes example {
   25% {
     background-color: var(--light-text);
@@ -132,7 +172,6 @@ nav ul {
 /*QUEM SOU*/
 
 #quem-sou {
-  min-height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +195,16 @@ h2 {
 .quem-container {
   display: flex;
   align-items: center;
-  margin-top: 6,2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 37.5rem) {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .photo-container {
@@ -190,24 +238,17 @@ h2 {
 .quote-box {
   background-color: var(--background);
   padding: 1.8rem;
-  margin-left: -0.5rem;
   margin-top: 2rem;
   border-radius: 0.3rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 1, 1);
   color: var(--light-text);
-  width: 37.5rem;
+  max-width: 37.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
-@media (min-width: 37.5rem) {
-  .quoto-box {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-}
 
 .quem-intro {
   line-height: 1.6;
@@ -233,7 +274,7 @@ h2 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   overflow: hidden;
 }
@@ -244,27 +285,38 @@ h2 {
   object-fit: cover;
   transition: transform 0.5s ease;
   border-radius: 0.6rem;
-}
-@media only screen and (max-width: 37.5rem) {
-    .gallery-img-1 {
-      grid-area: 1 / span 6;
-    }
-    .gallery-img-2 {
-      grid-area: 2 / span 6;
-    }
-    .gallery-img-3 {
-      grid-area: 3 / span 6;
-    }
-    .gallery-img-4 {
-      grid-area: 4 / span 6;
-    }
-    .gallery-img-5 {
-      grid-area: 5 / span 6;
-    }
-    .gallery-img-6 {
-      grid-area: 6 / span 6;
-    }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    margin: auto;
   }
+}
+
+@media only screen and (max-width: 37.5rem) {
+  .gallery-img-1 {
+    grid-area: 1 / span 6;
+  }
+
+  .gallery-img-2 {
+    grid-area: 2 / span 6;
+  }
+
+  .gallery-img-3 {
+    grid-area: 3 / span 6;
+  }
+
+  .gallery-img-4 {
+    grid-area: 4 / span 6;
+  }
+
+  .gallery-img-5 {
+    grid-area: 5 / span 6;
+  }
+
+  .gallery-img-6 {
+    grid-area: 6 / span 6;
+  }
+}
 
 .gallery-grid img:hover {
   transform: scale(0.95);
@@ -278,15 +330,10 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 50rem;
 }
 
 #servicos h2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  text-align: center;
 }
 
 .servicos-lista li {
@@ -301,6 +348,7 @@ h2 {
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 #contato-form-container {
